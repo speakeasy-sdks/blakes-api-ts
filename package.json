@@ -1,6 +1,6 @@
 {
   "name": "APITest",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "SammyDavis",
   "scripts": {
     "prepare": "tsc --build"
