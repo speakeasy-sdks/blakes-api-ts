@@ -6,7 +6,7 @@ import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
 import axios from "axios";
-import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
 /**
  * Contains the list of servers available to the SDK
@@ -43,8 +43,8 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0";
-    sdkVersion = "0.1.2";
-    genVersion = "2.118.1";
+    sdkVersion = "0.1.3";
+    genVersion = "2.122.1";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -77,7 +77,7 @@ export class APITest {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/pets";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers = { ...config?.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers };
         headers["Accept"] = "application/json";
 
         headers[
