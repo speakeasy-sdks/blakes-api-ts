@@ -43,8 +43,8 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0";
-    sdkVersion = "0.1.3";
-    genVersion = "2.122.1";
+    sdkVersion = "0.1.4";
+    genVersion = "2.125.1";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -108,7 +108,7 @@ export class APITest {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.patchPets200ApplicationJSONAnyOf = JSON.parse(decodedRes);
+                    res.patchPets200ApplicationJSONOneOf = JSON.parse(decodedRes);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
