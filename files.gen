@@ -20,14 +20,8 @@ src/sdk/types/rfcdate.ts
 tsconfig.json
 src/sdk/models/operations/patchpets.ts
 src/sdk/models/operations/index.ts
-src/sdk/models/shared/petbyage.ts
-src/sdk/models/shared/petbytype.ts
-src/sdk/models/shared/index.ts
 src/sdk/models/errors/index.ts
 USAGE.md
 docs/models/operations/patchpetsresponse.md
-docs/models/shared/petbyage.md
-docs/models/shared/petbytypepettype.md
-docs/models/shared/petbytype.md
 docs/sdks/apitest/README.md
 .gitattributes

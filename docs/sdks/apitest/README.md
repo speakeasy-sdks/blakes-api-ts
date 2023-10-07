@@ -13,15 +13,16 @@
 
 ```typescript
 import { APITest } from "APITest";
-import { PatchPetsResponse } from "APITest/dist/sdk/models/operations";
 
-const sdk = new APITest();
+(async() => {
+  const sdk = new APITest();
 
-sdk.apiTest.patchPets().then((res: PatchPetsResponse) => {
+  const res = await sdk.apiTest.patchPets();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
