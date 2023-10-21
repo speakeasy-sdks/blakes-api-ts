@@ -27,15 +27,16 @@ yarn add https://github.com/speakeasy-sdks/blakes-api-ts
 ```typescript
 import { APITest } from "APITest";
 
-(async() => {
-  const sdk = new APITest();
+(async () => {
+    const sdk = new APITest();
 
-  const res = await sdk.patchPets();
+    const res = await sdk.apiTest.patchPets();
 
-  if (res.statusCode == 200) {
-    // handle response
-  }
+    if (res.statusCode == 200) {
+        // handle response
+    }
 })();
+
 ```
 <!-- End SDK Example Usage -->
 
