@@ -17,7 +17,8 @@ import { APITest } from "APITest";
 (async() => {
   const sdk = new APITest();
 
-  const res = await sdk.apiTest.patchPets();
+  const res = await sdk.patchPets();
+
 
   if (res.statusCode == 200) {
     // handle response

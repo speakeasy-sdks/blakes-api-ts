@@ -28,5 +28,5 @@ export class PatchPetsResponse extends SpeakeasyBase {
      * Updated
      */
     @SpeakeasyMetadata()
-    patchPets200ApplicationJSONOneOf?: any;
+    oneOf?: any;
 }

@@ -19,8 +19,8 @@ src/sdk/types/index.ts
 src/sdk/types/rfcdate.ts
 tsconfig.json
 src/sdk/models/operations/patchpets.ts
-src/sdk/models/operations/index.ts
 src/sdk/models/errors/index.ts
+src/sdk/models/operations/index.ts
 USAGE.md
 docs/models/operations/patchpetsresponse.md
 docs/sdks/apitest/README.md
