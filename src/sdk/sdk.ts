@@ -43,9 +43,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0";
-    sdkVersion = "0.7.0";
-    genVersion = "2.181.1";
-    userAgent = "speakeasy-sdk/typescript 0.7.0 2.181.1 1.0 APITest";
+    sdkVersion = "0.7.1";
+    genVersion = "2.185.0";
+    userAgent = "speakeasy-sdk/typescript 0.7.1 2.185.0 1.0 APITest";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -63,7 +63,7 @@ export class APITest {
             serverURL = ServerList[serverIdx];
         }
 
-        const defaultClient = props?.defaultClient ?? axios.create({ baseURL: serverURL });
+        const defaultClient = props?.defaultClient ?? axios.create();
         this.sdkConfiguration = new SDKConfiguration({
             defaultClient: defaultClient,
             serverURL: serverURL,
@@ -76,7 +76,7 @@ export class APITest {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/pets";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/pets";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         const headers: RawAxiosRequestHeaders = { ...config?.headers };
         headers["Accept"] = "application/json";
@@ -85,7 +85,7 @@ export class APITest {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "patch",
             headers: headers,
             responseType: "arraybuffer",

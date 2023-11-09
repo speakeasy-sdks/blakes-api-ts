@@ -19,7 +19,6 @@ import { APITest } from "APITest";
 
   const res = await sdk.patchPets();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -35,5 +34,9 @@ import { APITest } from "APITest";
 
 ### Response
 
-**Promise<[operations.PatchPetsResponse](../../models/operations/patchpetsresponse.md)>**
+**Promise<[operations.PatchPetsResponse](../../sdk/models/operations/patchpetsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
