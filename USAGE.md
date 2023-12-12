@@ -1,8 +1,8 @@
-<!-- Start SDK Example Usage -->
+<!-- Start SDK Example Usage [usage] -->
 ```typescript
 import { APITest } from "APITest";
 
-(async () => {
+async function run() {
     const sdk = new APITest();
 
     const res = await sdk.patchPets();
@@ -10,7 +10,9 @@ import { APITest } from "APITest";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->

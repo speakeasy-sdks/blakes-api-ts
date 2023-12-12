@@ -21,7 +21,7 @@ tsconfig.json
 src/sdk/models/operations/patchpets.ts
 src/sdk/models/errors/index.ts
 src/sdk/models/operations/index.ts
-USAGE.md
 docs/sdk/models/operations/patchpetsresponse.md
 docs/sdks/apitest/README.md
+USAGE.md
 .gitattributes
